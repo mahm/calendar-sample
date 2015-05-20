@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.1'
+#ruby '2.2.1'
 
 gem 'rails', '4.2.1'
 gem 'pg'
@@ -69,3 +69,6 @@ group :development, :test do
   gem 'spring-commands-rspec'
 end
 
+gem 'momentjs-rails'
+gem 'react-rails', '~> 1.0'
+gem 'lodash-rails'
