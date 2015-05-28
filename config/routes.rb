@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'home#index'
+  resources :requests
+  resources :licenses
+  resource :lending_histories,path: 'lendings_calendar' , only: %i(show)
+  root to: 'lending_histories#show'
 end

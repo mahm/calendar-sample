@@ -1,0 +1,40 @@
+%h5= @date
+.row
+  .col-md-6
+    .panel.panel-success
+      .panel-heading 割り当て未済
+      %table.table
+        %thead
+          %tr
+            %th 名前
+            %th 部署
+            %th コントローラ数
+            %th 専用区画数
+            %th ブロック数
+        %tbody
+          - @waiting_requests.each do |request|
+            %tr
+              %td= request.name
+              %td= request.department
+              %td= request.controller
+              %td= request.division
+              %td= request.block
+  .col-md-6
+    .panel.panel-default
+      .panel-heading 割り当て済
+      %table.table
+        %thead
+          %tr
+            %th 名前
+            %th 部署
+            %th コントローラ数
+            %th 専用区画数
+            %th ブロック数
+        %tbody
+          - @approved_requests.each do |request|
+            %tr
+              %td= request.name
+              %td= request.department
+              %td= request.controller
+              %td= request.division
+              %td= request.block
